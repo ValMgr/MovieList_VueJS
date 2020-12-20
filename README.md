@@ -1,4 +1,4 @@
-# td3
+# Movies & Series List - VueJS - DAWIN Project
 
 ## Project setup
 ```

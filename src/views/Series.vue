@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <SearchItem :medias="movies" :displayed="displayed" @setDisplay="setDisplay"/>
+        <SearchItem :medias="series" :displayed="displayed" @setDisplay="setDisplay"/>
         <MediaList :type="type" :medias="displayed"/>
     </div>
 </template>
@@ -19,9 +19,9 @@ export default {
   },
   data: function(){
     return {
-      type: "movies",
-      movies: window.global_data.movies,
-      displayed: window.global_data.movies
+      type: "series",
+      series: window.global_data.series,
+      displayed: window.global_data.series
     }
   },
   methods: {

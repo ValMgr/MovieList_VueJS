@@ -5,20 +5,19 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Title</th>
-      <th scope="col">Year</th>
       <th scope="col">Productor</th>
       <th scope="col">Short</th>
+      <th scope="col"></th>
       <th scope="col"></th>
       <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
-    <tr v-for="(movie, index) in movies" :key="index">
+    <tr v-for="(media, index) in medias" :key="index">
       <th scope="row">{{index+1}}</th>
-      <td>{{movie.title}}</td>
-      <td>{{movie.year}}</td>
-      <td>{{movie.productor}}</td>
-      <td>{{movie.short}}</td>
+      <td>{{media.title}}</td>
+      <td>{{media.productor}}</td>
+      <td>{{media.short}}</td>
       <td><button class="btn btn-info" v-on:click="Inspect(index)">View</button></td>
       <td><button class="btn btn-warning" v-on:click="Edit(index)">Edit</button></td>
       <td><button class="btn btn-danger" v-on:click="$emit('del', index)">x</button></td>
@@ -30,16 +29,17 @@
 
 <script>
 export default {
-  name: 'MovieItem',
+  name: 'MediaItem',
   props: {
-    movies: Array,
+    medias: Array,
+    type: String
   },
   methods: {
     Edit: function(index){
-     this.$router.push("/movies/"+index+"/edit");
+     this.$router.push("/"+this.type+"/"+index+"/edit");
     },
     Inspect: function(index){
-     this.$router.push("/movies/"+index+"/view");
+     this.$router.push("/"+this.type+"/"+index);
     },
   },
 }

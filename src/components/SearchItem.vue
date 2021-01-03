@@ -1,53 +1,58 @@
 <template>
-   <div class="form-group">
-      Search: <input class="form-control" type="text" v-model="search"><br>
-        <button class="btn btn-primary" v-on:click="searchMovies()">Search</button>
-        <button class="btn btn-secondary" v-on:click="resetSearch()">x</button>
+    <div class="search">
+        <div class="form-group">
+        Search: <input class="form-control" type="text" v-model="search"><br>
+            <button class="btn btn-primary md-2" v-on:click="searchItem()">Search</button>
+            <button class="btn btn-secondary" v-on:click="resetSearch(this)">x</button>
+        </div>
     </div>
 </template>
 
 <script>
 
-import MovieList from '@/components/MovieList.vue';
-
 export default {
     name: "SearchItem",
+    props: {
+        medias: Array,
+        displayed: Array,
+    },
     data: function(){
         return {
             search: null,
-            result: null,
-            movies: window.global_data.movies
+            toDisplay: null,
         }
     },
-    created: function () {
-        this.result = this.movies
-        MovieList.setResult(this.result)
-    },
     methods: {
-        searchMovies: function (){
-            if(this.search == ""){
-                this.result = this.movies
+        searchItem: function (){
+            if(this.search == "" || this.search === null){
+                this.toDisplay = this.medias
+                this.$emit('setDisplay', this.toDisplay);
             }
             else{
                 let r = [];
-                for(const movie of this.movies) {
-                    for (const param in movie) {
-                        if(movie[param].toLowerCase().includes(this.search.toLowerCase())){
-                                r.push(movie)
+                for(const media of this.medias) {
+                    for (const param in media) {
+                        if(media[param].toLowerCase().includes(this.search.toLowerCase())){
+                                r.push(media)
                                 break;
                         }
                     }
                 }
-                this.result = r;
+                this.toDisplay = r;
+                this.$emit('setDisplay', this.toDisplay);
             }
         },
         resetSearch: function(){
-            this.result = this.movies
+            this.search = ""
+            this.toDisplay = this.medias
+            this.$emit('setDisplay', this.toDisplay);
         }
     }
 }
 </script>
 
 <style>
-
+.md-2{
+    margin-right: .5em;
+}
 </style>

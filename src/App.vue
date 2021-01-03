@@ -9,7 +9,8 @@
       <section class="navbar-section">
         <div id="nav">
          <router-link to="/">Home</router-link> |
-         <router-link to="/movies">Movies</router-link>
+         <router-link to="/movies">Movies</router-link> |
+         <router-link to="/series">Series</router-link>
         </div>
       </section>
     </header>
@@ -82,5 +83,8 @@ h1{
 
 .container:first-of-type{
   margin-top: 15vh;
+}
+h2{
+  text-decoration: underline;
 }
 </style>

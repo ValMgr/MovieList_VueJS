@@ -32,24 +32,9 @@ export default {
   },
    
   methods: {
-    // addMovie: function () {
-    //     let newMovie = {
-    //         title: this.title,
-    //         year: this.year,
-    //         productor: this.productor,
-    //         short: this.short,
-    //     }
-    //     this.movies.push(newMovie);
-
-    //     this.title = '';
-    //     this.year = '';
-    //     this.productor = '';
-    //     this.short = '';
-
-    // },
     deleteMedia: function(ind){
-        if(this.type == 'series') window.global_data.series.splice(ind, 1);
-        if(this.type == 'movies') window.global_data.movies.splice(ind, 1);
+        if(this.type == 'series') window.data.series.splice(ind, 1);
+        if(this.type == 'movies') window.data.movies.splice(ind, 1);
     }
   },
 }

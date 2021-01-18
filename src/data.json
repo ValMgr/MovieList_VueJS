@@ -1,0 +1,96 @@
+{
+    "movies": [
+        {
+            "title": "13 Hours",
+            "season": null,
+            "year": "2016",
+            "short": "Le 11 septembre 2012, à Benghazi, dans une Libye en plein chaos, des milices islamistes extrémistes prennent d'assaut l'enceinte d'un camp des Forces spéciales de l'armée américaine dans laquelle se trouve l'ambassadeur Chris Stevens. Une deuxième attaque est ensuite opérée sur une base de la CIA voisine. Engagés par l'agence de renseignements, six agents de la sécurité et ex-soldats d'élite organisent du mieux qu'ils peuvent la résistance.",
+            "genre": "Guerre",
+            "poster": "https://fr.web.img4.acsta.net/pictures/16/03/25/16/30/517554.jpg",
+            "productor": {
+                "name": "Bay",
+                "firstname": "Michael",
+                "country": "United States",
+                "birthdate": "1965-02-17"
+            }
+
+        },
+        {
+            "title": "Interstellar",
+            "season": null,
+            "year": "2014",
+            "short": "Dans un futur proche, la Terre est de moins en moins accueillante pour l'humanité qui connaît une grave crise alimentaire. Le film raconte les aventures d'un groupe d'explorateurs qui utilise une faille récemment découverte dans l'espace-temps afin de repousser les limites humaines et partir à la conquête des distances astronomiques dans un voyage interstellaire.",
+            "genre": "Science-fiction",
+            "poster": "https://fr.web.img6.acsta.net/pictures/14/09/24/12/08/158828.jpg",
+            "productor": {
+                "name": "Nolan",
+                "firstname": "Christopher",
+                "country": "United Kingdom",
+                "birthdate": "1970-07-30"
+            }
+
+        },
+        {
+            "title": "Léon",
+            "season": null,
+            "year": "1994",
+            "short": "Un tueur à gages répondant au nom de Léon prend sous son aile Mathilda, une petite fille de 12 ans, seule rescapée du massacre de sa famille. Bientôt, Léon va faire de Mathilda une `nettoyeuse', comme lui. La jeune fille pourra alors venger son petit frère.",
+            "genre": "Drame",
+            "poster": "https://fr.web.img2.acsta.net/pictures/14/08/21/14/15/233032.jpg",
+            "productor": {
+                "name": "Besson",
+                "firstname": "Luc",
+                "country": "France",
+                "birthdate": "1959-03-18"
+            }
+
+        },
+        {
+            "title": "Tenet",
+            "season": null,
+            "year": "2020",
+            "short": "Tenet est un thriller et un film de science-fiction sorti en 2020, écrit et réalisé par Christopher Nolan qui l'a également produit avec Emma Thomas.",
+            "genre": "Science-fiction",
+            "poster": "https://fr.web.img2.acsta.net/pictures/20/08/03/12/15/2118693.jpg",
+            "productor": {
+                "name": "Nolan",
+                "firstname": "Christopher",
+                "country": "United Kingdom",
+                "birthdate": "1970-07-30"
+            }
+
+        }
+    ],
+    "series": [
+        {
+            "title": "Dark",
+            "season": 3,
+            "year": "2017",
+            "short": "Lorsque deux enfants disparaissent dans une petite ville allemande, son passé tragique refait surface. Quatre familles à la recherche des enfants vont voir leur routine bouleversée et les secrets de chacun vont être mis en lumière.",
+            "genre": "Science-fiction",
+            "poster": "https://fr.web.img4.acsta.net/pictures/17/11/10/12/18/2448823.jpg",
+            "productor": {
+                "name": "Bo Odar",
+                "firstname": "Baran",
+                "country": "Switzerland",
+                "birthdate": "1978-04-18"
+            }
+            
+        },
+        {
+            "title": "Peaky Blinders",
+            "season": 5,
+            "year": "2013",
+            "short": "Birmingham, en 1919. Un gang familial règne sur un quartier de la ville : les Peaky Blinders, ainsi nommés pour les lames de rasoir qu'ils cachent dans la visière de leur casquette.",
+            "genre": "Drame historique",
+            "poster": "https://fr.web.img6.acsta.net/pictures/210/457/21045721_20131001172258551.jpg",
+            "productor": {
+                "name": "Knight",
+                "firstname": "Steven",
+                "country": "United Kingdom",
+                "birthdate": "1959-01-01"
+            }
+            
+        }
+    ]
+}

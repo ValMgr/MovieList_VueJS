@@ -1,5 +1,5 @@
 <template>
-  <select v-on:change="updateValue($event)">
+  <select class="select-country" v-on:change="updateValue($event)" ref="select">
     <option value="Afghanistan">Afghanistan</option>
     <option value="Åland Islands">Åland Islands</option>
     <option value="Albania">Albania</option>
@@ -250,9 +250,22 @@
 <script>
 export default {
     name: 'CountryForm',
+    props: {
+      value: String,
+    },
     methods: {
       updateValue: function (event){
         this.$emit('getCountry', event.target.value)
+      }
+    },
+    mounted: function (){
+      if(this.value != null && this.value != undefined){
+        let select = this.$refs.select;
+        for (const option of select) {
+          if(option.value == this.value){
+            option.selected = true
+          }
+        }
       }
     }
 

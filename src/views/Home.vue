@@ -1,6 +1,7 @@
 <template>
     <div class="container">
       <h2>HomePage</h2>
+      <p class="desc">Insert description here...</p>
     </div>
 </template>
 
@@ -13,3 +14,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.desc{
+  margin-top: 5em;
+}
+</style>

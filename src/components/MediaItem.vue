@@ -5,8 +5,10 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Title</th>
+      <th v-if="this.type == 'series'" scope="col">Season</th>
+      <th scope="col">Genre</th>
+      <th scope="col">Year</th>
       <th scope="col">Productor</th>
-      <th scope="col">Short</th>
       <th scope="col"></th>
       <th scope="col"></th>
       <th scope="col"></th>
@@ -14,10 +16,12 @@
   </thead>
   <tbody>
     <tr v-for="(media, index) in medias" :key="index">
-      <th scope="row">{{index+1}}</th>
+      <td scope="row">{{index+1}}</td>
       <td>{{media.title}}</td>
-      <td>{{media.productor}}</td>
-      <td>{{media.short}}</td>
+      <td v-if="type == 'series'">{{media.season}}</td>
+      <td>{{media.genre}}</td>
+      <td>{{media.year}}</td>
+      <td>{{media.productor.firstname}} {{media.productor.name}}</td>
       <td><button class="btn btn-info" v-on:click="Inspect(index)">View</button></td>
       <td><button class="btn btn-warning" v-on:click="Edit(index)">Edit</button></td>
       <td><button class="btn btn-danger" v-on:click="$emit('del', index)">x</button></td>

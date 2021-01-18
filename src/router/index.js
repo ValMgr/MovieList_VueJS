@@ -21,14 +21,38 @@ const routes = [
   },
   {
     path: '/movies/:id',
-    name: 'ViewMovie',
+    name: 'editMovie',
     component: () => import('../views/ViewMedia.vue'),
-    children: [
-      {
-        path: 'edit',
-        component: () => import('../components/MediaForm.vue')
-      },
-    ]
+    props: {
+      type: 'movies',
+    },
+   
+  },
+  {
+    path: '/movies/:id/edit',
+    name: 'ViewMovie',
+    component: () => import('../views/AddMedia.vue'),
+    props: {
+      type: 'movies',
+      action: 'edit'
+    }
+  },
+  {
+    path: '/series/:id',
+    name: 'ViewSerie',
+    component: () => import('../views/ViewMedia.vue'),
+    props: {
+      type: 'series',
+    }
+  },
+  {
+    path: '/series/:id/edit',
+    name: 'editSerie',
+    component: () => import('../views/AddMedia.vue'),
+    props: {
+      type: 'series',
+      action: 'edit'
+    }
   },
   {
     path: '/media/add/:type',

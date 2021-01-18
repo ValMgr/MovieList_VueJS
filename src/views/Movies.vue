@@ -20,8 +20,8 @@ export default {
   data: function(){
     return {
       type: "movies",
-      movies: window.global_data.movies,
-      displayed: window.global_data.movies
+      movies: window.data.movies,
+      displayed: window.data.movies
     }
   },
   methods: {

@@ -32,9 +32,19 @@ export default {
                 let r = [];
                 for(const media of this.medias) {
                     for (const param in media) {
-                        if(media[param].toLowerCase().includes(this.search.toLowerCase())){
+                        if(media[param] != null){
+                            if(media[param][0] == undefined){
+                                for(const property in media[param]){
+                                    if(media[param][property].toLowerCase().includes(this.search.toLowerCase())){
+                                        r.push(media)
+                                        break;
+                                    }
+                                }
+                            }
+                            else if(media[param].toLowerCase().includes(this.search.toLowerCase())){
                                 r.push(media)
                                 break;
+                            }
                         }
                     }
                 }

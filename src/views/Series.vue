@@ -20,8 +20,8 @@ export default {
   data: function(){
     return {
       type: "series",
-      series: window.global_data.series,
-      displayed: window.global_data.series
+      series: window.data.series,
+      displayed: window.data.series
     }
   },
   methods: {

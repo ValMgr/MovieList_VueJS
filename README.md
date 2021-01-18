@@ -1,4 +1,4 @@
-# Movies & Series List - VueJS - DAWIN Project
+# Movies & Series List - VueJS - DAWIN Project - Valentin Magry
 
 ## Project setup
 ```
